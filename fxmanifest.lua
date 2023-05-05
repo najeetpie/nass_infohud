@@ -5,7 +5,7 @@ lua54 'yes'
 
 description 'nass_infohud'
 author 'Nass#1411'
-version '1.0.0'
+version '1.0.1'
 
 shared_scripts { 'config.lua' }
 
