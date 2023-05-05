@@ -12,8 +12,10 @@ Citizen.CreateThread(function()
 end)
 
 RegisterCommand('openinfohud', function()
-    
-    
+    local id = 1
+    if Config.showId then
+        id = GetPlayerServerId(PlayerId())
+    end
     SendNUIMessage({
         showUI = true,
         name =  getName(),
@@ -22,6 +24,7 @@ RegisterCommand('openinfohud', function()
 		bank = getBank(),
 		cfg = Config,
         picture = dispPic,
+        id = id,
     }) 
 end)
 
